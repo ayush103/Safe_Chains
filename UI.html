@@ -67,28 +67,7 @@
 
   
   </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-(function($){
-        function processForm( x ){
-            $.ajax({
-                url: 'users.php',
-                dataType: 'int',
-                type: 'post',
-                contentType: 'application/x-www-form-urlencoded',
-                data: $(this).serialize(),
-                success: function( data, textStatus, jQxhr ){
-                    $('#response pre').html( data );
-                },
-                error: function( jqXhr, textStatus, errorThrown ){
-                    console.log( errorThrown );
-                }
-            });
-}
 
-        $('#my-form').submit( processForm );
-    })(jQuery);
-</script>
 </head>
 <body>
 <img src="https://i.ibb.co/r2xVPnG/logo.png" alt="logo" border="0" height="100px" width="100px" style="border-radius: 50% float: inherit; margin-left: 34%; margin-top: 2.25%;"></div>
@@ -97,27 +76,24 @@
 <div class="box">
 
 <h1 class = "safechains">SafeChains</h1>
-<form>
 <table cellspacing=10px cellpadding=10px>
 <tr>
-<td><button id="1" onclick="processForm(1)" class="btn btn1">ADD USER</a></td>
-<td><button id="2" onclick="processForm(2)" class="btn btn1">MAKE COIN</a></td>
+<td><a href="" class="btn btn1">ADD USER</a></td>
+<td><a href="" class="btn btn1">MAKE COIN</a></td>
 </tr>
 <tr>
-<td><button id="3" onclick="processForm(3)" class="btn btn1">MAKE TRANSACTION</a></td>
-<td><button id="4" onclick="processForm(4)" class="btn btn1">DISPLAY BLOCK CHAIN</a></td>
+<td><a href="" class="btn btn1">MAKE TRANSACTION</a></td>
+<td><a href="" class="btn btn1">DISPLAY BLOCK CHAIN</a></td>
 </tr>
 <tr>
-<td><button id="5" onclick="processForm(5)" class="btn btn1">SHOW USERS</a></td>
-<td><button id="6" onclick="processForm(6)" class="btn btn1">VERIFY</a></td>
+<td><a href="" class="btn btn1">SHOW USERS</a></td>
+<td><a href="" class="btn btn1">VERIFY</a></td>
 </tr>
 <tr>
-<td><button id="7" onclick="processForm(7)" class="btn btn1">CHANGE BLOCK</a></td>
-<td><button id="8" onclick="processForm(8)" class="btn btn1">VALIDATE THE CHAIN</a></td>
+<td><a href="" class="btn btn1">CHANGE BLOCK</a></td>
+<td><a href="" class="btn btn1">VALIDATE THE CHAIN</a></td>
 </tr>
 </table>
-<input type="submit" value="submit">
-</form>
 </div>
 </pre>
 </body>
