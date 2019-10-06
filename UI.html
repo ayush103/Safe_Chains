@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SAFECHAINS</title>
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">>
+<link rel = "icon" type = "image/png" href = "https://i.ibb.co/r2xVPnG/logo.png" style="border-radius: 50%">
+<style>
+    body{
+            background-image:url("https://data.whicdn.com/images/279072832/original.gif");
+	    background-repeat: repeat;
+        }
+        .box{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .btn {
+	    text-align: center;
+            position: relative;
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            font-family: Verdana;
+            text-decoration: none;
+            margin: 0px 0px;
+            border: 3px solid;
+	    border-image: linear-gradient(45deg, #00d2ff, #928DAB);
+	    border-image-slice: 10;
+            padding: 20px 40px;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 1s all ease;
+        }
+            .btn::before {
+                content: "";
+                background-image: linear-gradient(45deg,#928DAB,#00d2ff);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: -1;
+                transition: all 0.6s ease;
+            }
+	    .btn1::before {
+		width:0;
+                height:100%;
+	    }
+	    .btn:hover::before{
+                width:100%;
+	        text-color:black;
+            }
+	     .safechains{
+          	background: -webkit-linear-gradient(#928DAB,#00d2ff);
+  		-webkit-background-clip: text;
+  		-webkit-text-fill-color: transparent;
+          	font-family: 'Julius Sans One', sans-serif;
+		color: #FFFFFF;
+		font-weight: -50%;
+		margin-left: 32%;
+		margin-top: 10px;
+		font-size: 350%;
+	    }
+
+  
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+(function($){
+        function processForm( x ){
+            $.ajax({
+                url: 'users.php',
+                dataType: 'int',
+                type: 'post',
+                contentType: 'application/x-www-form-urlencoded',
+                data: $(this).serialize(),
+                success: function( data, textStatus, jQxhr ){
+                    $('#response pre').html( data );
+                },
+                error: function( jqXhr, textStatus, errorThrown ){
+                    console.log( errorThrown );
+                }
+            });
+}
+
+        $('#my-form').submit( processForm );
+    })(jQuery);
+</script>
+</head>
+<body>
+<img src="https://i.ibb.co/r2xVPnG/logo.png" alt="logo" border="0" height="100px" width="100px" style="border-radius: 50% float: inherit; margin-left: 34%; margin-top: 2.25%;"></div>
+<br>
+<pre>
+<div class="box">
+
+<h1 class = "safechains">SafeChains</h1>
+<form>
+<table cellspacing=10px cellpadding=10px>
+<tr>
+<td><button id="1" onclick="processForm(1)" class="btn btn1">ADD USER</a></td>
+<td><button id="2" onclick="processForm(2)" class="btn btn1">MAKE COIN</a></td>
+</tr>
+<tr>
+<td><button id="3" onclick="processForm(3)" class="btn btn1">MAKE TRANSACTION</a></td>
+<td><button id="4" onclick="processForm(4)" class="btn btn1">DISPLAY BLOCK CHAIN</a></td>
+</tr>
+<tr>
+<td><button id="5" onclick="processForm(5)" class="btn btn1">SHOW USERS</a></td>
+<td><button id="6" onclick="processForm(6)" class="btn btn1">VERIFY</a></td>
+</tr>
+<tr>
+<td><button id="7" onclick="processForm(7)" class="btn btn1">CHANGE BLOCK</a></td>
+<td><button id="8" onclick="processForm(8)" class="btn btn1">VALIDATE THE CHAIN</a></td>
+</tr>
+</table>
+<input type="submit" value="submit">
+</form>
+</div>
+</pre>
+</body>
+</html>
+
+
+		
